@@ -1,0 +1,45 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+/build
+/cover
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# XAMPP specific
+/.htaccess
+/.htpasswd
+/error_log
+
+# Local development
+*.local.php
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
