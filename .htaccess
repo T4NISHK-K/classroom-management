@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /classroom/
+
+# Allow direct access to API endpoints
+RewriteCond %{REQUEST_URI} ^/classroom/api/ [NC]
+RewriteRule ^ - [L]
+
+# Allow direct access to PHP files
+RewriteCond %{REQUEST_URI} \.php$ [NC]
+RewriteRule ^ - [L]
+
+# Allow direct access to build directory (for assets)
+RewriteCond %{REQUEST_URI} ^/classroom/build/ [NC]
+RewriteRule ^ - [L]
+
+# Serve existing files and directories as-is (but exclude root directory)
+RewriteCond %{REQUEST_URI} !^/classroom/?$ [NC]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# SPA entry: send root and all non-file routes to the built React index
+RewriteRule ^(.*)$ build/v1/index.html [L]
+

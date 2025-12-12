@@ -9,7 +9,6 @@ node_modules/
 .env.production.local
 
 # Build output
-/build
 /cover
 
 # IDE specific files
@@ -23,7 +22,6 @@ node_modules/
 Thumbs.db
 
 # XAMPP specific
-/.htaccess
 /.htpasswd
 /error_log
 
